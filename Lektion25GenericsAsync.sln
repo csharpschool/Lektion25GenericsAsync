@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34202.233
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lektion25GenericsAsync", "Lektion25GenericsAsync\Lektion25GenericsAsync.csproj", "{531A1177-B110-4404-9391-37BAD7548DAC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{531A1177-B110-4404-9391-37BAD7548DAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{531A1177-B110-4404-9391-37BAD7548DAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{531A1177-B110-4404-9391-37BAD7548DAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{531A1177-B110-4404-9391-37BAD7548DAC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7718D349-0C6E-4C41-B160-2728BB46E92A}
+	EndGlobalSection
+EndGlobal

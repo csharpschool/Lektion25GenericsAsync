@@ -1,0 +1,52 @@
+﻿@page "/"
+@using Lektion25GenericsAsync.Classes;
+@using Lektion25GenericsAsync.Extensions;
+@inject Data data
+
+<button class="btn btn-primary" 
+    @onclick="async ()=> dogs = await data.Get()">Get</button>
+
+<button class="btn btn-primary"
+@onclick="()=> cats = catList.Get()">
+    Get (all)
+</button>
+
+<button class="btn btn-primary"
+@onclick="@(()=> cats = catList.Get(c => c.Race == "Egyptian Mau"))">
+    Get (Lambda)
+</button>
+
+
+<input @bind="race" />
+<button class="btn btn-primary"
+@onclick="()=> dogs.AddNew(new Dog() { Id = 4, Race = race })">
+    Add
+</button>
+
+<ul>
+    @foreach (var d in dogs)
+    {
+        <li>@d.Id @d.Race</li>
+    }
+</ul>
+
+<ul>
+    @foreach (var c in cats)
+    {
+        <li>@c.Id @c.Race</li>
+    }
+</ul>
+
+@code{
+    List<Dog> dogs = new();
+    List<Cat> cats = new();
+
+    AnimalList<Cat> catList = new()
+    {
+        new Cat { Id = 1, Race = "Siamese" },
+        new Cat { Id = 2, Race = "Egyptian Mau" }
+    };
+
+    string race = string.Empty;
+}
+
